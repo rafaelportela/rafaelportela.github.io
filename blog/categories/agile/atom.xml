@@ -1,94 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Rafael Portela</title>
-  <meta name="author" content="Rafael Portela">
-
-  
-  <meta name="description" content="Recently a bunch of people has been unhappy with Agile methodologies, or with the way the software community is facing the Agile practices.
-Dave &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://rafaelportela.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Rafael Portela" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Rafael Portela</a></h1>
-  
-    <h2>Programming with cheese</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="rafaelportela.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Category: Agile | Rafael Portela]]></title>
+  <link href="http://rafaelportela.github.io/blog/categories/agile/atom.xml" rel="self"/>
+  <link href="http://rafaelportela.github.io/"/>
+  <updated>2015-01-19T15:57:26+02:00</updated>
+  <id>http://rafaelportela.github.io/</id>
+  <author>
+    <name><![CDATA[Rafael Portela]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2015/01/17/whats-wrong-with-agile-part-1/">What&#8217;s Wrong With Agile? - Part 1</a></h1>
-    
-    
-      <p class="meta">
-        
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
-
-
-
-<time class='entry-date' datetime='2015-01-17T16:50:03+02:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>4:50 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently a bunch of people has been unhappy with Agile methodologies, or with the way the software community is facing the Agile practices.
+  
+  <entry>
+    <title type="html"><![CDATA[What's Wrong With Agile? - Part 1]]></title>
+    <link href="http://rafaelportela.github.io/blog/2015/01/17/whats-wrong-with-agile-part-1/"/>
+    <updated>2015-01-17T16:50:03+02:00</updated>
+    <id>http://rafaelportela.github.io/blog/2015/01/17/whats-wrong-with-agile-part-1</id>
+    <content type="html"><![CDATA[<p>Recently a bunch of people has been unhappy with Agile methodologies, or with the way the software community is facing the Agile practices.
 Dave Thomas, one of the guys in Snowbird in 2001, said that <a href="http://pragdave.me/blog/2014/03/04/time-to-kill-agile">Agile is dead</a> pointing out to the fact of the word &ldquo;agile&rdquo; being used as a noun, becoming a marketing term.
 After a while, it wasn&rsquo;t hard to find <a href="http://agileotter.blogspot.nl/2014/02/i-want-agile-back.html">more</a> <a href="http://rubiquity.com/2014/03/12/agile-is-dead-angry-developer.html">of</a> <a href="https://flowchainsensei.wordpress.com/2014/03/11/i-dont-want-agile-back/">that</a>.</p>
 
@@ -113,68 +43,7 @@ What really matters is having some smart people together, which can work as a te
 <p>Given all of this, I see different rants about Agile. I see PragDave&rsquo;s concern about the word Agile being used everywhere, for all different comercial purposes, making it semantically useless. Agile management, agile testing, agile requirements, agile sushi.. followed by certifications, courses, books, consultants, specialists - and I don&rsquo;t think using the word &ldquo;agility&rdquo; instead (developing software with agility) would make lots of difference.
 I see some techies frowning at people who don&rsquo;t code and who claim themselves to be agile because they can facilitate a standup meeting after a 2 days training. Those folks want a more technical approach to Agile, if they want to call it Agile.
 And finally, I see rants like <a href="http://vimeo.com/110554082">Erik Meijer&rsquo;s epic one</a>, where he claims that Agile is a cancer in the industry and that we, developers, are being abused by our managers. I want to talk about the later one on the second part of this post.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2015/01/17/whats-wrong-with-agile-part-1/">What&#8217;s Wrong With Agile? - Part 1</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Rafael Portela -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
