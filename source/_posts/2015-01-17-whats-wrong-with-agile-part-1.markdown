@@ -1,0 +1,33 @@
+---
+layout: post
+title: "What's wrong with Agile? - Part 1"
+date: 2015-01-17 16:50:03 +0200
+comments: true
+categories: [agile]
+---
+
+Recently a bunch of people has been unhappy with Agile methodologies, or with the way the software community is facing the Agile practices.
+Dave Thomas, one of the guys in Snowbird in 2001, said that [Agile is dead](http://pragdave.me/blog/2014/03/04/time-to-kill-agile) pointing out to the fact of the word "agile" being used as a noun, becoming a marketing term.
+After a while, it wasn't hard to find [more](http://agileotter.blogspot.nl/2014/02/i-want-agile-back.html) [of](http://rubiquity.com/2014/03/12/agile-is-dead-angry-developer.html) [that](https://flowchainsensei.wordpress.com/2014/03/11/i-dont-want-agile-back/).
+
+Personally, I've seen a lot people understanding the adoption of Scrum as a synonym of Agile adoption. If you have standups, iterations and stories, you are doing Agile -- look how "Agile" here is something you are, or you do, like I am cool or I am rockin'.
+Not surprisingly an [Anti-Agile Manifesto](http://antiagilemanifesto.com/) came out, where the words describing it confirm the common misundertanding around Scrum and Agile.
+
+In fact, Scrum is a quite simple framework, but implementing it with good results might be hard, depending how complex is your people and technology environments. It doesn't cover everything a good software team should do, and some adopters were not putting the right effort on the technical disciplines a software project requires.
+Lots of developers got disapointed with Scrum, and consequently with Agile, because the methodology leaves the impression that deliver a software project can be done just following the Scrum practices.
+I imagine that's the reason Extreme Programming got some spotlight again recently.
+
+Scrum was designed to be simple, which helped to get the popularity it got. But even considering the covered practices, there are some flaws.
+All developers I know hate estimating stories. It's not because it isn't important, we just can't do it right. Not even close.
+The sprint metaphor is just wrong: it doesn't help to make it clear that a software project is more about delivering the right features with some confidence as soon as you can, and not really about rushing everything all the time. Eventually it might be necessary to get something done fast (and consciously compromising quality) due an specifc timeline, but definitely not one [sprint](http://en.wikipedia.org/wiki/Sprint_\(running\)) after another.
+
+Counting the story points in each sprint gives you the team velocity, which is the poison of Agile projects (or Scrum projects, should I say?). 
+I remember the teams I worked with telling people about how points and velocity work, and later on trying to make them forget about that, focusing on getting feedback about the features instead. Velocity is the first thing managers understand, and that's the metric they want to track. Most of time it's useless. Higher or not, velocity doesn't reflect the status of a project.
+If the project is going well, with working software making people happy, Scrum takes the glories of being an effective methodology. If the team is having a hard time to deliver, all those Agile practices we are spending a lot of time to get are just bullshit.
+
+I've being lucky to work with a lot of great people. This fact increases a lot the chances of a project we are working on to succeed. If the client people - both developers and business - are engaged with the team, the chances of success are even higher.
+What really matters is having some smart people together, which can work as a team, helping and colaborating with each other, releasing software and getting feedback from it. These are the true Agile fundamentals. At this point, Scrum, Kanban, issue trackers, instant messengers, or anything that helps to communicate and organize the work, although important, become secundary.
+
+Given all of this, I see different rants about Agile. I see PragDave's concern about the word Agile being used everywhere, for all different comercial purposes, making it semantically useless. Agile management, agile testing, agile requirements, agile sushi.. followed by certifications, courses, books, consultants, specialists - and I don't think using the word "agility" instead (developing software with agility) would make lots of difference.
+I see some techies frowning at people who don't code and who claim themselves to be agile because they can facilitate a standup meeting after a 2 days training. Those folks want a more technical approach to Agile, if they want to call it Agile.
+And finally, I see rants like [Erik Meijer's epic one](http://vimeo.com/110554082), where he claims that Agile is a cancer in the industry and that we, developers, are being abused by our managers. I want to talk about the later one on the second part of this post.
