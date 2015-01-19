@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Agile | Rafael Portela]]></title>
   <link href="http://rafaelportela.github.io/blog/categories/agile/atom.xml" rel="self"/>
   <link href="http://rafaelportela.github.io/"/>
-  <updated>2015-01-19T16:22:28+02:00</updated>
+  <updated>2015-01-19T21:25:35+02:00</updated>
   <id>http://rafaelportela.github.io/</id>
   <author>
     <name><![CDATA[Rafael Portela]]></name>
@@ -37,7 +37,7 @@ The sprint metaphor is just wrong: it doesn&rsquo;t help to make it clear that a
 I remember the teams I worked with telling people about how points and velocity work, and later on trying to make them forget about that, focusing on getting feedback about the features instead. Velocity is the first thing managers understand, and that&rsquo;s the metric they want to track. Most of time it&rsquo;s useless. Higher or not, velocity doesn&rsquo;t reflect the status of a project.
 If the project is going well, with working software making people happy, Scrum takes the glories of being an effective methodology. If the team is having a hard time to deliver, all those Agile practices we are spending a lot of time to get are just bullshit.</p>
 
-<p>In Thoughtworks I&rsquo;m lucky to work with a lot of great people. This fact increases a lot the chances of a project we are working on to succeed. If the client people - both developers and business - are engaged with the team, the chances of success are even higher.
+<p>I&rsquo;ve being lucky to work with a lot of great people. This fact increases a lot the chances of a project we are working on to succeed. If the client people - both developers and business - are engaged with the team, the chances of success are even higher.
 What really matters is having some smart people together, which can work as a team, helping and colaborating with each other, releasing software and getting feedback from it. These are the true Agile fundamentals. At this point, Scrum, Kanban, issue trackers, instant messengers, or anything that helps to communicate and organize the work, although important, become secundary.</p>
 
 <p>Given all of this, I see different rants about Agile. I see PragDave&rsquo;s concern about the word Agile being used everywhere, for all different comercial purposes, making it semantically useless. Agile management, agile testing, agile requirements, agile sushi.. followed by certifications, courses, books, consultants, specialists - and I don&rsquo;t think using the word &ldquo;agility&rdquo; instead (developing software with agility) would make lots of difference.
