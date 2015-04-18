@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Agile | Rafael Portela]]></title>
   <link href="http://rafaelportela.github.io/blog/categories/agile/atom.xml" rel="self"/>
   <link href="http://rafaelportela.github.io/"/>
-  <updated>2015-01-19T21:25:35+02:00</updated>
+  <updated>2015-04-18T16:31:31+02:00</updated>
   <id>http://rafaelportela.github.io/</id>
   <author>
     <name><![CDATA[Rafael Portela]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[What's Wrong With Agile? - Part 1]]></title>
-    <link href="http://rafaelportela.github.io/blog/2015/01/17/whats-wrong-with-agile-part-1/"/>
+    <link href="http://rafaelportela.github.io/whats-wrong-with-agile-part-1"/>
     <updated>2015-01-17T16:50:03+02:00</updated>
-    <id>http://rafaelportela.github.io/blog/2015/01/17/whats-wrong-with-agile-part-1</id>
+    <id>http://rafaelportela.github.io/whats-wrong-with-agile-part-1</id>
     <content type="html"><![CDATA[<p>Recently a bunch of people has been unhappy with Agile methodologies, or with the way the software community is facing the Agile practices.
 Dave Thomas, one of the guys in Snowbird in 2001, said that <a href="http://pragdave.me/blog/2014/03/04/time-to-kill-agile">Agile is dead</a> pointing out to the fact of the word &ldquo;agile&rdquo; being used as a noun, becoming a marketing term.
 After a while, it wasn&rsquo;t hard to find <a href="http://agileotter.blogspot.nl/2014/02/i-want-agile-back.html">more</a> <a href="http://rubiquity.com/2014/03/12/agile-is-dead-angry-developer.html">of</a> <a href="https://flowchainsensei.wordpress.com/2014/03/11/i-dont-want-agile-back/">that</a>.</p>
@@ -38,7 +38,7 @@ I remember the teams I worked with telling people about how points and velocity 
 If the project is going well, with working software making people happy, Scrum takes the glories of being an effective methodology. If the team is having a hard time to deliver, all those Agile practices we are spending a lot of time to get are just bullshit.</p>
 
 <p>I&rsquo;ve being lucky to work with a lot of great people. This fact increases a lot the chances of a project we are working on to succeed. If the client people - both developers and business - are engaged with the team, the chances of success are even higher.
-What really matters is having some smart people together, which can work as a team, helping and colaborating with each other, releasing software and getting feedback from it. These are the true Agile fundamentals. At this point, Scrum, Kanban, issue trackers, instant messengers, or anything that helps to communicate and organize the work, although important, become secundary.</p>
+What really matters is having some smart people together, which can work as a team, helping and colaborating with each other, releasing software and getting feedback from it. These are the true <a href="http://agilemanifesto.org/">Agile</a> <a href="http://agilemanifesto.org/principles.html">fundamentals</a>. At this point, Scrum, Kanban, issue trackers, instant messengers, or anything that helps to communicate and organize the work, although important, become secundary.</p>
 
 <p>Given all of this, I see different rants about Agile. I see PragDave&rsquo;s concern about the word Agile being used everywhere, for all different comercial purposes, making it semantically useless. Agile management, agile testing, agile requirements, agile sushi.. followed by certifications, courses, books, consultants, specialists - and I don&rsquo;t think using the word &ldquo;agility&rdquo; instead (developing software with agility) would make lots of difference.
 I see some techies frowning at people who don&rsquo;t code and who claim themselves to be agile because they can facilitate a standup meeting after a 2 days training. Those folks want a more technical approach to Agile, if they want to call it Agile.

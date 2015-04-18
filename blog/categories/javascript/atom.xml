@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Javascript, | Rafael Portela]]></title>
+  <link href="http://rafaelportela.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://rafaelportela.github.io/"/>
+  <updated>2015-04-18T16:31:31+02:00</updated>
+  <id>http://rafaelportela.github.io/</id>
+  <author>
+    <name><![CDATA[Rafael Portela]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Javascript Callbacks vs Promises]]></title>
+    <link href="http://rafaelportela.github.io/javascript-callbacks-vs-promises"/>
+    <updated>2015-04-18T11:35:08+02:00</updated>
+    <id>http://rafaelportela.github.io/javascript-callbacks-vs-promises</id>
+    <content type="html"><![CDATA[<p>Promises are used to deal with asynchronous and concurrent programming. If you are familiar with callbacks, it&rsquo;s worthy to mention that
+promises and callbacks are similiarily used to specify what should happen when a result from an asynchronous and non blocking
+task that your program may be waiting for becomes available. The most noticeable difference for me is on the way you should
+structure your code to handle the returned values from such async calls. To the examples!</p>
+
+<h3>Reading files with callbacks</h3>
+
+<p>Most of the built in libraries in Node.js are based on callbacks. If you want to open and read a file, you should supply
+a callback that is going to be executed when the data from the file (or an exception) is returned.</p>
+
+<pre><code class="javascript">var fs = require('fs');
+
+var printContent = function(err, data) {
+  if (err) {
+    console.log("Something went wrong!");
+    return;
+  }
+
+  console.log(data);
+};
+
+fs.readFile("input.txt", "utf-8", printContent);
+</code></pre>
+
+<h3>Reading files with promises</h3>
+
+<p>Imagine the case where, instead of requiring a callback, a function that reads a file returns a promise to you. A promise is
+a self contained object where you can plug a function to be executed when the data from the file is returned. You could also
+plug another function to handle an exception.</p>
+
+<pre><code>var printContent = function(data) {
+  console.log(data);
+}
+
+var promise = promiseFromFile("input.txt");
+
+promise.then(printContent);
+</code></pre>
+
+<p>You could also inline it and plug an exception handler function.</p>
+
+<pre><code>promiseFromFile("input.txt")
+  .then(printContent)
+  .catch(logError);
+</code></pre>
+
+<p>Notice that <code>printContent</code> is going to be executed later on, by the time the content of the file is returned.
+Eventually, if a problem occur when opening or reading the file, the <code>printContent</code> would be skipped and the
+exception would be handled by <code>logError</code>. It still reminds callbacks, but the advantages with this code structure
+becomes more evident when we have more tasks that should be executed one after another. In the world of callbacks,
+each callback function is nested inside the previous one.</p>
+
+<p>When using promises you can call <code>then()</code> with a handler function as parameter, which executes when the promise
+realise its value. The handler function might also returns a promise, and in this case you could chain another <code>then()</code>,
+and so on. This chainning approach makes the code more readable than nesting callbacks.</p>
+
+<p>Usually you are going to be using a module or an API that return promises to you. But you also may be interested in make
+you own asynch and non blocking functions return promises, instead of expecting callbacks as parameters. As an example,
+let&rsquo;s wrap the callback-based <code>readFile</code> function to make it return promises instead.</p>
+
+<h3>Returning promises instead of requiring callbacks</h3>
+
+<p>Based on the first code snippet, I&rsquo;m going to wrap the original <code>readFile</code> into another function that returns a promise.
+I&rsquo;ll create a deferred object using <code>defer()</code>, and then return the <code>promisse</code> out of it.</p>
+
+<pre><code>var filePromise = function(filename) {
+
+  // create an empty deferred object
+  var deferred = q.defer();
+
+  fs.readFile(filename, "utf-8", function(err, data) {
+    if (err) {
+      console.log("Something went wrong!");
+      return;
+    }
+
+    console.log(data);
+  });
+
+  // the actual promisse
+  return deferred.promise;
+}
+</code></pre>
+
+<p>It doesn&rsquo;t work yet. At this point, I need to fulfill the value of the promise with the
+returned content of the file, when it is returned. In other words, this is when the promise should be resolved. I also
+need to reject the promise with an exception in case of an error is being returned.</p>
+
+<pre><code>var filePromise = function(filename) {
+
+  var deferred = q.defer();
+
+  fs.readFile(filename, "utf-8", function(err, data) {
+    if (err) {
+      // reject the promise when an error is returned
+      return deferred.reject(new Error(err));
+    }
+
+    // resolving the promisse with the file content
+    return deferred.resolve(data);
+  });
+
+  return deferred.promise;
+}
+</code></pre>
+
+<p>Now I&rsquo;m ready to try to read a file. I just need to get the promise and plug my handlers on it.</p>
+
+<pre><code>filePromise("input.txt")
+  .then(function(data) {
+    console.log("file content: " + data);
+  })
+  .catch(function(error) {
+    console.log("Something went wrong!");
+  });
+</code></pre>
+
+<h3>Callbacks vs Promise</h3>
+
+<p>Things would get more interesting, and more useful!, if you need to do other asynchronous tasks by the time you get your
+first result back from the promisse. Using callbacks, you should have to nest the functions.</p>
+
+<pre><code>// function that reads a file
+var readFile(filename, callback) { ... };
+
+// function to post data to a service
+var post = function(url, data, callback) { ... };
+
+// function to save data to the database
+var save = function(conn, data, callback) { ... };
+
+readFile("input.txt", function(err, data) {
+  if (err) {
+    return console.log("Something went wrong!");
+  }
+
+  post("http://server.com", data, function(err, res) {
+    if (err) {
+      return console.log("Something went wrong");
+    }
+
+    save(conn, data, function(err) {
+      if (err) {
+        return console.log("Something went wrong");
+      }
+    });
+  });
+});
+</code></pre>
+
+<p>With promises, would be possible to chain handlers when they also return promises.</p>
+
+<pre><code>// reads a file, and returns a promise
+var readFile(filename) { ... return deferred.promise; };
+
+// post data, and returns a promise
+var post(url, data) { ... return deferred.promise; };
+
+// save in the db, and returns a promise
+var save(conn, data) { ... return deferred.promise; };
+
+readFile("input.txt")
+  .then(function(data) {
+    return post("http://server.com", data)
+  })
+  .then(function(data) {
+    return save("database:mydb", data);
+  })
+  .catch(logError);
+</code></pre>
+
+<p>I hope it helps as a starting point to understand how promises work.</p>
+]]></content>
+  </entry>
+  
+</feed>
